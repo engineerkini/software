@@ -26,8 +26,8 @@ const About = () => {
                 </p>
             </div>
             {/* Our Talents  */}
-             <div className='text-bodyText px-5 lg:px-[50px] xl:px-[100px] pt-5 '>
-                <div  className='py-2 bg-bgCard rounded-md'>
+             <div className='text-bodyText px-5 lg:px-[50px] xl:px-[100px] pt-5 flex flex-col items-center justify-center'>
+                <div  className='py-2 bg-bgCard rounded-md md:w-1/2 px-5'>
                     <h2 className=' text-bodyText text-2xl md:text-4xl text-center font-medium '>Talents in The <span className='bg-gradient-to-r from-primaryText to-secondaryText text-transparent bg-clip-text '>X P Room</span> </h2>
                 </div>
 

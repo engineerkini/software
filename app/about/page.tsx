@@ -27,8 +27,8 @@ const About = () => {
             </div>
             {/* Our Team  */}
       
-        <div className='text-bodyText px-5 lg:px-[50px] xl:px-[100px] pt-5 '>
-                <div  className='py-2 bg-bgCard rounded-md'>
+        <div className='text-bodyText px-5 lg:px-[50px] xl:px-[100px] pt-5 flex flex-col items-center justify-center'>
+                <div  className='py-2 bg-bgCard rounded-md md:w-1/2 px-5'>
                     <h2 className=' text-bodyText text-2xl md:text-4xl text-center font-medium '>Our <span className='bg-gradient-to-r from-primaryText to-secondaryText text-transparent bg-clip-text '> Team</span> </h2>
                 </div>
 
@@ -63,68 +63,62 @@ const iconGroup: IconMap = {
 const peopleWithIcons: Person[] = [
   {
     name: "Danny Irakoze",
-    profession: "Musician",
+    profession: "Musician & Talent Manager",
     image: "/images/team1.png",
     instagram: "https://instagram.com",
     twitter: "https://x.com",
   },
   {
     name: "Jane Doe",
-    profession: "Artist",
+    profession: "CIO & Artist",
     image: "/images/team2.png",
     instagram: "https://instagram.com/janedoe",
     twitter: "https://x.com/janedoe",
   },
   {
     name: "John Smith",
-    profession: "Photographer",
+    profession: "Professional Photographer",
     image: "/images/team1.png",
     instagram: "https://instagram.com/johnsmith",
     twitter: "https://x.com/johnsmith",
   },
   {
     name: "Emily Johnson",
-    profession: "Designer",
+    profession: "Creative Designer",
     image: "/images/team2.png",
     instagram: "https://instagram.com/emilyjohnson",
     twitter: "https://x.com/emilyjohnson",
   },
   {
     name: "Michael Brown",
-    profession: "Videographer",
+    profession: "Cinematographer & Videographer",
     image: "/images/team2.png",
     instagram: "https://instagram.com/michaelbrown",
     twitter: "https://x.com/michaelbrown",
   },
   {
     name: "Sarah Wilson",
-    profession: "Writer",
+    profession: "Writer & Content Creator",
     image: "/images/team1.png",
     instagram: "https://instagram.com/sarahwilson",
     twitter: "https://x.com/sarahwilson",
   },
   {
     name: "Chris Lee",
-    profession: "DJ",
+    profession: "DJ & Sound Engineer",
     image: "/images/team1.png",
     instagram: "https://instagram.com/chrislee",
     twitter: "https://x.com/chrislee",
   },
   {
     name: "Anna Martinez",
-    profession: "Dancer",
-    image: "/images/team1.png",
-    instagram: "https://instagram.com/annamartinez",
-    twitter: "https://x.com/annamartinez",
-  },
-  {
-    name: "Anna Martinez",
-    profession: "Dancer",
+    profession: "Professional Dancer & Trainer",
     image: "/images/team1.png",
     instagram: "https://instagram.com/annamartinez",
     twitter: "https://x.com/annamartinez",
   },
 ];
+
 
 // Component to render cards
 function TeamCards() {

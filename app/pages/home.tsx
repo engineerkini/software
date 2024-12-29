@@ -1,6 +1,15 @@
 import { Button } from '@/components/ui/button';
 import StarryBackground from '../test/page';
+import { Component } from 'lucide-react';
+import Link from 'next/link';
 const Home = () => {
+  const email = 'fidelniyomugabo67@gmail.com'; // Replace with your email
+  const subject = encodeURIComponent('Inquiry About Support or Investment');
+  const body = encodeURIComponent(
+    `Hello,\n\nI am contacting your company to:\n\n- Seek guidance and talent support.\n- Discuss potential investment opportunities to support your company.\n\nPlease let me know how we can proceed further.\n\nLooking forward to your response.\n\nBest regards,`
+  );
+
+  const mailtoLink = `mailto:${email}?subject=${subject}&body=${body}`;
 
   return (
     <>
@@ -36,9 +45,14 @@ const Home = () => {
 
     <button
 
-      className=" cursor-pointer bg-gradient-to-r from-primaryText to-secondaryText  text-white px-7 py-4 bg-opacity-10 hover:bg-opacity-75 shadow-xl hover:shadow-2xl text-bodyDefault font-[600] rounded-[10px] transition-all duration-300 mt-6"
+      className="  cursor-pointer bg-gradient-to-r from-primaryText to-secondaryText  text-white px-5 shadow-md shadow-primaryText py-3 bg-opacity-10 hover:bg-opacity-75 hover:shadow-lg text-bodyDefault font-[600] rounded-[10px] transition-all duration-300 mt-6"
     >
-   Get Started
+      <Link href="/#contact">
+      <span className='flex items-center justify-center gap-2'>
+    <Component className='w-[14px] h-[14px]' /> Get Started
+    </span>
+      </Link>
+
     </button>
   </div>
 </div>

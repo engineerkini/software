@@ -50,6 +50,14 @@ const GradientText: React.FC<GradientTextProps> = ({ parts, className = "" }) =>
 
 // components/Contact.tsx
 const Contact: React.FC = () => {
+  const email = 'fidelniyomugabo67@gmail.com'; // Replace with your email
+  const subject = encodeURIComponent('Inquiry About Support or Investment');
+  const body = encodeURIComponent(
+    `Hello,\n\nI am contacting your company to:\n\n- Seek guidance and talent support.\n- Discuss potential investment opportunities to support your company.\n\nPlease let me know how we can proceed further.\n\nLooking forward to your response.\n\nBest regards,`
+  );
+
+  const mailtoLink = `mailto:${email}?subject=${subject}&body=${body}`;
+
   const contactInfo: ContactInfo[] = [
     {
       icon: Phone,
@@ -89,10 +97,10 @@ const Contact: React.FC = () => {
             </p>
 
          <div className='flex items-center justify-center'>
-         <button className="bg-bgCard hover:bg-[#3f3121c5] text-primaryText px-8 py-3 flex gap-1 items-center justify-center
+         <a href={mailtoLink} className="bg-bgCard hover:bg-[#3f3121c5] text-primaryText px-8 py-3 flex gap-1 items-center justify-center
                              rounded-md  text-bodyDefault font-medium hover:opacity-90 transition-all duration-300">
-              <Plane/> Contact Us
-            </button >
+              <Plane/> Connect with Us
+            </a >
          </div>
           </div>
 

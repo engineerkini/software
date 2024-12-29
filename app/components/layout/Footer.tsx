@@ -26,9 +26,9 @@ const Footer = () => {
                     <div className="flex flex-col md:flex-row justify-center items-center mb-4 gap-2 md:gap-4  ">
                         <div className=" md:mb-0">
                             {/* Logo  */}
-                            <div className='relative z-50'>
-                                <span className='w-[60px] h-[60px] cursor-pointer'>
-                                    <img className='w-[60] cursor-pointer  h-[60] object-cover object-center' src="/logo.png" alt="logo" />
+                            <div className=''>
+                                <span className=' cursor-pointer'>
+                                    <img className='w-[250px] cursor-pointer  h-[250px] object-cover object-center' src="/logo.png" alt="logo" />
                                 </span>
                             </div>
 

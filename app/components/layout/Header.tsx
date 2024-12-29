@@ -40,17 +40,26 @@ const Header = () => {
     document.body.style.overflow = 'unset';
   };
 
+  const email = 'fidelniyomugabo67@gmail.com'; // Replace with your email
+  const subject = encodeURIComponent('Inquiry About Support or Investment');
+  const body = encodeURIComponent(
+    `Hello,\n\nI am contacting your company to:\n\n- Seek guidance and talent support.\n- Discuss potential investment opportunities to support your company.\n\nPlease let me know how we can proceed further.\n\nLooking forward to your response.\n\nBest regards,`
+  );
+
+  const mailtoLink = `mailto:${email}?subject=${subject}&body=${body}`;
+
+
   return (
     <header 
-      className={`flex justify-center items-center  fixed top-0 w-full z-50 transition-all duration-300 
+      className={`flex justify-center items-center  fixed top-0  w-full z-50 transition-all duration-300 
         ${scrolled ? 'bg-black/80 backdrop-blur-md shadow-lg' : 'bg-transparent'}
         ${menuOpen ? 'bg-black/90' : ''}`}
     >
-      <div className=' container flex justify-between items-center  px-4 md:px-8 lg:px-16'>
+      <div className=' container flex justify-between items-center h-[60px]  px-4 lg:px-8 '>
         {/* Logo */}
         <div className='relative z-50'>
           <span className='w-[60px] h-[60px] cursor-pointer'>
-          <img className='w-[60] cursor-pointer  h-[60] object-cover object-center'src="/logo.png" alt="logo" />
+          <img className='w-[60px] cursor-pointer  h-[60px] object-cover object-center'src="/logo.png" alt="logo" />
           </span>
         </div>
 
@@ -77,11 +86,11 @@ const Header = () => {
      <div className=' flex items-center gap-4'>
            {/* Sign Up Button */}
            <div className='relative z-50'>
-          <Button className='hover:bg-[#3f3121c5] bg-bgCard text-primaryText px-4 py-2 md:py-3 
+          <a href={mailtoLink} className='hover:bg-[#3f3121c5] bg-bgCard text-primaryText px-4 py-2 lg:py-3 
             rounded-full transition-all duration-300 flex items-center gap-2'>
             <Plane className="w-4 h-4" />
-            <span>Connect with Us</span>
-          </Button>
+            <span className='w-full'>Connect with Us</span>
+          </a>
         </div>
 
         {/* Mobile Menu Button */}
