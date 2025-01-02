@@ -35,7 +35,7 @@ const Home = () => {
     <p className=" px-5 text-[16px] text-gray-400 mx-auto leading-[20px] animate-fade-in-delay">
     Our mission is to nurture and elevate young artists in the fields of singing,
 producing, and videography by providing them with comprehensive training programs,
-hands-on opportunities, and a supportive community
+hands-on opportunities, and a supportive community.
     </p>
     <button className="px-8 py-3 rounded-md mt-5 font-medium text-white bg-gradient-to-r from-pink-500 to-amber-500 shadow-lg hover:opacity-90 transition-all duration-300" style={{
         boxShadow: '0 4px 15px rgba(255, 146, 91, 0.3)'

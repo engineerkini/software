@@ -70,9 +70,9 @@ const Header = () => {
               <li key={link.href}>
                 <a
                   href={link.href}
-                  className='relative text-white hover:text-gray-300 transition-colors duration-300
+                  className='relative text-gray-400 hover:text-gray-500 transition-colors duration-300
                     after:content-[""] after:absolute after:w-full after:h-0.5 
-                    after:bg-primaryText after:left-0 after:-bottom-1 after:rounded-full
+                    after:bg-gradient-to-r from-pink-500 to-amber-500 after:left-0 after:-bottom-1 after:rounded-full
                     after:scale-x-0 after:transition-transform after:duration-300
                     hover:after:scale-x-100'
                 >
@@ -96,7 +96,7 @@ const Header = () => {
         {/* Mobile Menu Button */}
         <button 
           onClick={toggleMenu}
-          className='relative z-50 md:hidden text-white p-2 hover:bg-white/10 rounded-full
+          className='relative z-50 md:hidden text-bodyText p-2 hover:bg-white/10 rounded-full
             transition-colors duration-300'
         >
           {menuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -122,7 +122,7 @@ const Header = () => {
                 <a
                   href={link.href}
                   onClick={handleLinkClick}
-                  className='text-white  font-light hover:text-gray-300 
+                  className='text-bodyText  font-light hover:text-gray-300 
                     transition-colors duration-300 relative
                     after:content-[""] after:absolute after:w-full after:h-0.5 
                     after:bg-white after:left-0 after:-bottom-1 after:rounded-full

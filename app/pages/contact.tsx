@@ -25,7 +25,7 @@ interface ContactCardProps extends ContactInfo {
 }
 
 const ContactCard: React.FC<ContactCardProps> = ({ icon: Icon, title, details, className = "" }) => (
-  <div className={`bg-gradient-to-b from-[#1d1c1c95] to-transparent p-6 rounded-[8px] text-center ${className}`}>
+  <div className={`bg-gradient-to-b border bg-bgCard/15  border-bgCard/15 rounded-md p-6 text-center ${className}`}>
     <Icon className="w-8 h-8 text-primaryText mx-auto mb-4" />
     <h3 className="text-white font-semibold mb-2">{title}</h3>
     <p className="text-gray-400">{details}</p>

@@ -2,6 +2,7 @@ import React from 'react';
 import { BarChart, Users, Music, Book, Calendar, Eye } from 'lucide-react';
 import PlatformDashboard from '../components/layout/platform';
 import { FaMusic, FaCalendarAlt, FaUsers, FaChartBar, FaVideo, FaHandshake, FaBook, FaStar, FaHeart } from 'react-icons/fa'; // Example icons from react-icons library
+import FAQSection from './FAQ';
 // Define the type for feature data
 interface Feature {
   icon: React.ComponentType<{ className?: string }>;
@@ -107,6 +108,7 @@ const Services: React.FC = () => {
       <div className="absolute  -z-10 inset-0 bg-gradient-to-b from-black/50 via-black/80 to-black" />
         
       {/* <PlatformDashboard /> */}
+
     </section>
   );
 };
