@@ -68,10 +68,11 @@ const SocialLinks: React.FC<SocialLinksProps> = ({ links, className = "" }) => (
             <a
                 key={label}
                 href={href}
+                target="_blank"
                 aria-label={label}
                 className="hover:text-primaryText text-bodyText transition-colors"
             >
-                <Icon className="w-6 h-6" />
+                <Icon className="w-6 h-6 " />
             </a>
         ))}
     </div>

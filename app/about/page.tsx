@@ -15,26 +15,30 @@ type Person = {
   
 const About = () => {
     return (
-        <div className='min-h-screen bg-backgroundColor pt-[150px]'>
-            {/* Our Mission  */}
-            <div className='flex flex-col items-center justify-center px-5 gap-2'>
-                <h2 className='text-bodyText text-3xl md:text-5xl text-center font-medium flex items-center justify-center gap-5'>
-                    Our<span className='text-primaryText'>Mission</span>
-                </h2>
-                <p className='text-[#E4E4E7] text-bodyDefault leading-bodyDefault text-center md:w-2/4 xl:w-1/4 '>
-                    Build a unique platform that enhances events for attendees and organizers, offering easy networking, scheduling, and fostering communities with shared interests.
-                </p>
-            </div>
+        <div className='h-full bg-backgroundColor pt-[150px]'>
+       {/* Our Mission */}
+<div className="flex flex-col items-center justify-center px-5 gap-2">
+  <h2 className="text-bodyText text-3xl md:text-5xl text-center font-medium flex items-center justify-center gap-5">
+    Our<span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-amber-500   ">Mission</span>
+  </h2>
+  <p className="text-gray-400 text-bodyDefault leading-bodyDefault text-center md:w-3/4 xl:w-2/4">
+    To empower and elevate young talent in the fields of singing, producing, and videography, establishing Exposure Chronicle as a premier platform for artistic expression and media production in East Africa.
+  </p>
+  <p className="text-gray-400 text-bodyDefault leading-bodyDefault text-center md:w-3/4 xl:w-2/4 mt-4">
+    We believe in nurturing local talent to reshape the media landscape, inspiring the next generation of artists to thrive and innovate.
+  </p>
+</div>
+
             {/* Our Team  */}
       
-        <div className='text-bodyText px-5 lg:px-[50px] xl:px-[100px] pt-5 flex flex-col items-center justify-center'>
-                <div  className='py-2 bg-bgCard rounded-md md:w-1/2 px-5'>
-                    <h2 className=' text-bodyText text-2xl md:text-4xl text-center font-medium '>Our <span className='bg-gradient-to-r from-primaryText to-secondaryText text-transparent bg-clip-text '> Team</span> </h2>
+        <div className='text-bodyText  gap-5 px-5 lg:px-[50px] xl:px-[100px] pt-5 flex flex-col items-center justify-center'>
+                <div  className='py-2 border bg-bgCard/20 w-full  border-bgCard/15 rounded-md px-5'>
+                    <h2 className=' text-bodyText text-2xl md:text-4xl text-center font-medium '>Our <span className='text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-amber-500 '> Team</span> </h2>
                 </div>
 
              </div>
-            <div className='flex flex-col w-full items-center justify-center  gap-5 text-bodyText px-5 lg:px-[50px] xl:px-[100px] '>
-             
+            <div className=' flex-col w-full items-center justify-center  gap-5 text-bodyText px-5 lg:px-[50px] xl:px-[100px] '>
+        
                <TeamCards />
               
             </div>
@@ -127,7 +131,7 @@ function TeamCards() {
       {peopleWithIcons.map((person, index) => (
         <div key={index} className="text-bodyText pt-10">
           <div
-            className="relative bg-cover bg-center w-[280px]  xl:w-[300px] min-h-[300px] h-full rounded-md p-5 group overflow-hidden"
+            className="relative border border-bgCard/15   bg-cover bg-center min-w-[280px]  xl:min-w-[350px] min-h-[300px] h-full rounded-md p-5 group overflow-hidden"
             style={{ backgroundImage: `url(${person.image})` }}
           >
             {/* Overlay */}
