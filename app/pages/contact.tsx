@@ -41,7 +41,7 @@ interface GradientTextProps {
 const GradientText: React.FC<GradientTextProps> = ({ parts, className = "" }) => (
   <h2 className={` text-bodyText text-3xl md:text-5xl font-semibold ${className}`}>
     {parts.map((part, index) => (
-      <span key={index} className={part.highlight ? "text-primaryText" : "text-white"}>
+      <span key={index} className={part.highlight ? "text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-amber-500 " : "text-white"}>
         {part.text}
       </span>
     ))}
@@ -67,7 +67,7 @@ const Contact: React.FC = () => {
     {
       icon: Mail,
       title: "Email Us",
-      details: "info@ipraysupport.com"
+      details: "info@xprosureroomsupport.com"
     },
     {
       icon: MapPin,

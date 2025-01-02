@@ -1,7 +1,7 @@
 import React from 'react';
 import { BarChart, Users, Music, Book, Calendar, Eye } from 'lucide-react';
 import PlatformDashboard from '../components/layout/platform';
-
+import { FaMusic, FaCalendarAlt, FaUsers, FaChartBar, FaVideo, FaHandshake, FaBook, FaStar, FaHeart } from 'react-icons/fa'; // Example icons from react-icons library
 // Define the type for feature data
 interface Feature {
   icon: React.ComponentType<{ className?: string }>;
@@ -10,21 +10,16 @@ interface Feature {
 }
 
 const FeatureCard: React.FC<Feature> = ({ icon: Icon, title, description }) => (
-  <div className="relative  rounded-md transition-all duration-300 hover:scale-105 overflow-hidden group">
-    {/* Gradient background overlay */}
-    <div className="absolute inset-0 " />
-    
-    {/* Top shadow effect */}
-    <div className="absolute inset-x-0 top-0  h-24 bg-gradient-to-b from-bgCard to-[#1d1c1c31]" />
-    
+  <div className=" border bg-bgCard/15  border-bgCard/15 rounded-md overflow-hidden ">
+  
     {/* Content container */}
-    <div className="relative z-10 flex flex-col  gap-4  p-4  md:p-6  w-[280px]  xl:w-[300px] min-h-[300px] h-full">
-      <div className="w-12 h-12 mb-4 p-2.5 bg-orange-900/20 rounded-[8px] backdrop-blur-sm">
-        <Icon className="w-full h-full text-primaryText" />
+    <div className="  z-10 flex  flex-col  gap-4  p-4  w-full  min-w-[280px]  xl:min-w-full min-h-[200px] h-full">
+      <div className="w-[40px] h-[40px] flex items-center mb-4 p-2.5 bg-primaryText/30 rounded-[6px]">
+        <Icon className="w-[30px] h-[30px] text-primaryText" />
       </div>
      <div>
      <h3 className="text-xl font-semibold text-white mb-2">{title}</h3>
-     <p className="text-gray-400">{description}</p>
+     <p className="text-gray-500 text-sm w-full ">{description}</p>
      </div>
     </div>
 
@@ -34,49 +29,72 @@ const FeatureCard: React.FC<Feature> = ({ icon: Icon, title, description }) => (
 );
 // Services component
 const Services: React.FC = () => {
+  
+
   const features: Feature[] = [
     {
-      icon: Music,
-      title: "Creative Guidance",
-      description: "Receive expert guidance to nurture and develop your artistic skills.",
+      icon: FaMusic,
+      title: "Showcase Portfolio",
+      description: "Highlighting the best works from our participants to gain visibility and recognition.",
     },
     {
-      icon: Calendar ,
-      title: "Portfolio Building",
-      description: "Work on real-world projects that enhance your portfolio and showcase your talent.",
+      icon: FaVideo,
+      title: "Training Programs & Production",
+      description: "Access to a variety of workshops and courses designed to enhance skills in singing, producing, and videography.",
     },
     {
-      icon: Calendar,
-      title: "Collaborative Opportunities",
-      description: "Collaborate with industry professionals and fellow artists on exciting projects.",
+      icon: FaHandshake,
+      title: "Mentorship Opportunities",
+      description: "Connect with industry professionals for guidance, support, and career development.",
     },
     {
-      icon: Users,
-      title: "Creative Community",
-      description: "Connect with a vibrant community of artists for support, inspiration, and growth.",
+      icon: FaUsers,
+      title: "Community Hub",
+      description: "A vibrant forum for young creatives to collaborate, share ideas, and showcase their work.",
     },
     {
-      icon: BarChart,
-      title: "Performance Insights",
-      description: "Track your progress and performance through feedback and analytics.",
+      icon: FaBook,
+      title: "Online Content Library",
+      description: "Exclusive access to tutorials, resources, and inspiration tailored for aspiring artists.",
     },
     {
-      icon: BarChart,
-      title: "Global Exposure",
-      description: "Share your work with a global audience and expand your creative reach.",
+      icon: FaCalendarAlt,
+      title: "Event Calendar",
+      description: "Stay updated on upcoming workshops, networking events, and talent showcases.",
+    },
+    {
+      icon: FaHandshake,
+      title: "Partnership Opportunities",
+      description: "Information on how businesses and organizations can collaborate with us for mutual growth.",
+    },
+    {
+      icon: FaStar,
+      title: "Testimonials",
+      description: "Success stories and feedback from participants who have benefited from our programs.",
+    },
+    {
+      icon: FaBook,
+      title: "Blog and Resources",
+      description: "Articles, tips, and industry insights to keep our community informed and inspired.",
+    },
+    {
+      icon: FaHeart,
+      title: "Donate/Support Link",
+      description: "Encourage visitors to contribute towards our mission of empowering young creatives through financial support or sponsorship.",
     },
   ];
   
 
   return (
-    <section id="services" className="py-16 h-full bg-backgroundColor">
-      <div className="container mx-auto px-4">
+    <section id="services" className=" relative py-16 h-full bg-backgroundColor ">
+
+      <div className="container mx-auto px-4 z-30">
         <div className="text-center mb-12 space-y-3">
         <button className="bg-[#3f3f4666] text-bodyText px-5 py-3 text-bodySmall rounded-full transition-all duration-300">
         What we focus on ?
          </button>
           <h2 className="text-bodyText text-3xl md:text-5xl text-center font-semibold">
-            Our key <span className="text-primaryText">Features</span>
+            Our key <span className='text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-amber-500 ' >Services</span>
           </h2>
         </div>
 
@@ -86,6 +104,8 @@ const Services: React.FC = () => {
           ))}
         </div>
       </div>
+      <div className="absolute  -z-10 inset-0 bg-gradient-to-b from-black/50 via-black/80 to-black" />
+        
       {/* <PlatformDashboard /> */}
     </section>
   );
