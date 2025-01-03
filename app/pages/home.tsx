@@ -21,10 +21,10 @@ const Home = () => {
     </button>
 
     <div
-      className=" text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-amber-500   px-5 md:px-[50px] mt-5 mb-5  text-4xl md:text-8xl font-semibold  tracking-tight leading-tight animate-fade-in"
+      className=" text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-amber-500   px-5 md:px-[50px] mt-5 mb-5 text-3xl  sm:text-4xl md:text-7xl font-semibold  tracking-tight leading-tight animate-fade-in"
 
     >
-    <p>We empower the next generation </p> 
+    <p>We empower <br /> the next generation </p> 
 
       <span className=' text-4xl md:text-6xl pt-2' style={{ WebkitTextFillColor: '#FFFFFF', color: '#FFFFFF' }} >
       of creative talent
@@ -32,9 +32,9 @@ const Home = () => {
       </span>
     </div>
 
-    <p className=" px-5 text-[16px] text-gray-400 mx-auto leading-[20px] animate-fade-in-delay">
+    <p className=" px-5  sm:max-w-lg text-[16px] text-gray-400 text-center mx-auto leading-[20px] animate-fade-in-delay">
     Our mission is to nurture and elevate young artists in the fields of singing,
-producing, and videography by providing them with comprehensive training programs,
+producing, and videography by providing them with comprehensive training programs, 
 hands-on opportunities, and a supportive community.
     </p>
     <button className="px-8 py-3 rounded-md mt-5 font-medium text-white bg-gradient-to-r from-pink-500 to-amber-500 shadow-lg hover:opacity-90 transition-all duration-300" style={{
