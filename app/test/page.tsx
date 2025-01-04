@@ -1,58 +1,24 @@
-'use client'
+import React from 'react';
 
-import React, { useEffect } from 'react';
-import { usePathname, useSearchParams } from 'next/navigation';
-import NProgress from 'nprogress';
-
-const LoadingBar = () => {
-  const pathname = usePathname();
-  const searchParams = useSearchParams();
-
-  useEffect(() => {
-    NProgress.configure({ 
-      showSpinner: false,
-      easing: 'ease',
-      speed: 400
-    });
-
-    NProgress.start();
-    
-    const timer = setTimeout(() => {
-      NProgress.done();
-    }, 100);
-
-    return () => {
-      clearTimeout(timer);
-      NProgress.done();
-    };
-  }, [pathname, searchParams]);
-
+const ProfileCard = () => {
   return (
-    <style jsx global>{`
-      #nprogress {
-        pointer-events: none;
-      }
-      #nprogress .bar {
-        background: #0ea5e9;
-        position: fixed;
-        z-index: 9999;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 3px;
-      }
-      #nprogress .peg {
-        display: block;
-        position: absolute;
-        right: 0px;
-        width: 100px;
-        height: 100%;
-        box-shadow: 0 0 10px #0ea5e9, 0 0 5px #0ea5e9;
-        opacity: 1;
-        transform: rotate(3deg) translate(0px, -4px);
-      }
-    `}</style>
+    <div className="relative w-[300px] h-[400px] rounded-2xl overflow-hidden flex items-center justify-center shadow-lg">
+      {/* Profile Image */}
+      <div className="relative w-[200px] h-[200px] rounded-full overflow-hidden z-20">
+        <img
+          src="/images/team3.png"
+          alt="Profile"
+          className="w-full h-full object-cover"
+        />
+      </div>
+
+      {/* Gradient Shadow Effect */}
+      <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-indigo-500/50 to-transparent z-10"></div>
+
+      {/* Extra Shape Decorations */}
+      <div className="absolute top-[-30px] left-[-30px] w-[100px] h-[100px] rounded-full bg-white opacity-20 z-10"></div>
+    </div>
   );
 };
 
-export default LoadingBar;
+export default ProfileCard;
