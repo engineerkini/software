@@ -79,16 +79,59 @@ const peopleWithIcons: Person[] = [
   }
   
   type ProfessionType = 'Musician' | 'Artist' | 'Photographer' | 'Designer' | 'Videographer' | 'Writer' | 'DJ' | 'Dancer';
-  
-  const TeamMemberCard: React.FC<Person> = ({ name, profession, image }) => (
+  // Icon mapping remains the same as your original code
+const iconGroup = {
+  Musician: <AudioLines className="w-4 h-4" />,
+  Artist: <Palette className="w-4 h-4" />,
+  Photographer: <Camera className="w-4 h-4" />,
+  Designer: <Component className="w-4 h-4" />,
+  Videographer: <Video className="w-4 h-4" />,
+  Writer: <Signature className="w-4 h-4" />,
+  DJ: <Headphones className="w-4 h-4" />,
+  Dancer: <Drum className="w-4 h-4" />
+};
+
+  const TeamMemberCard: React.FC<Person> = ({ name, profession, image, instagram, twitter }) => (
     <div className="relative w-full  max-w-[670px] aspect-square p-4">
       {/* Container for the entire card */}
       <div className="relative w-full h-full group">
         
-        <img className=' rounded-md z-40 absolute bottom-0 right-5  w-[250px] h-[250px] object-contain object-center p-2' src={image} alt="image" />
-       <div className=' -z-10  absolute bg-bgCard border  border-bgCard/15 w-[120px] h-[300px] rounded-full'></div>
+        <img className=' rounded-full  z-40 absolute bottom-0 right-5  w-[250px] h-[250px] object-contain object-center p-2' src={image} alt="image" />
+       <div className=' -z-10  absolute bg-gradient-to-r from-pink-500 to-amber-500    border  border-bgCard/15 w-[120px] h-[300px] rounded-full'></div>
 
-      <div className=' z-30  absolute bg-bgCard/50 border   border-bgCard/15 left-[40%] top-[20%] w-[120px] h-[300px] rounded-full'></div>
+      <div className=' z-30  absolute bg-gradient-to-r from-pink-500 to-amber-500   border   border-bgCard/15 left-[40%] top-[20%] w-[120px] h-[300px] rounded-full'></div>
+  </div>
+  <div>
+     <div >
+            <div className="">
+              <h3 className="text-white font-medium text-lg mb-1">{name}</h3>
+              <div className="flex items-center gap-2 text-gray-200">
+                {iconGroup[profession]}
+                <span className="text-sm">{profession}</span>
+              </div>
+              
+              {/* Social Links */}
+              <div className="flex gap-3 mt-3">
+                <a
+                  href={instagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white hover:text-pink-500 transition-colors"
+                >
+                  <Instagram className="w-5 h-5" />
+                  {/* <Instagram className="w-5 h-5" /> */}
+                </a>
+                <a
+                  href={twitter}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white hover:text-pink-500 transition-colors"
+                >
+                  <Twitter className="w-5 h-5" />
+                </a>
+              </div>
+            </div>
+            </div>
   </div>
     </div>
   );
