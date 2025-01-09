@@ -9,7 +9,7 @@ interface Person {
   profession: ProfessionType;
   image: string;
   instagram: string;
-  twitter: string;
+ facebook: string;
 }
 type ProfessionType = 'Musician' | 'Artist' | 'Photographer' | 'Designer' | 'Videographer' | 'Writer' | 'DJ' | 'Dancer';
 

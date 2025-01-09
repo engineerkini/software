@@ -2,21 +2,21 @@
 'use client'
 
 import React, { useState, useEffect } from 'react';
-import { Instagram ,Twitter} from 'lucide-react';
+import { Instagram ,Facebook} from 'lucide-react';
 import talentData from '../data/talentData';
 interface Person {
   name: string;
   profession: ProfessionType;
   image: string;
   instagram: string;
-  twitter: string;
+  facebook: string;
 }
 type ProfessionType = 'Musician' | 'Artist' | 'Photographer' | 'Designer' | 'Videographer' | 'Writer' | 'DJ' | 'Dancer';
 
 const {iconGroup, talent} = talentData()
 
 
-const TalentCard: React.FC<Person> = ({ name, profession, image, instagram, twitter }) => (
+const TalentCard: React.FC<Person> = ({ name, profession, image, instagram, facebook }) => (
   <div className="relative w-full max-w-[670px] aspect-square">
     <div className="relative w-full h-full bg-bgCard/20 rounded-xl p-6 transition-transform duration-300 hover:scale-105 overflow-hidden group">
       {/* Gradient backgrounds */}
@@ -28,7 +28,7 @@ const TalentCard: React.FC<Person> = ({ name, profession, image, instagram, twit
         {/* Image with overlay for social icons */}
         <div className="relative mb-2 ">
           <img 
-            className="w-48 h-48 rounded-full object-center object-contain border-2 border-pink-500/50"
+            className="w-48 h-48 rounded-full object-center border-2 border-pink-500/50"
             src={image} 
             alt={name} 
           />
@@ -43,12 +43,12 @@ const TalentCard: React.FC<Person> = ({ name, profession, image, instagram, twit
                 <Instagram className="w-5 h-5 text-white" />
               </a>
               <a
-                href={twitter}
+                href={facebook}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 bg-pink-500/20 rounded-full hover:bg-pink-500/40 transition-colors"
               >
-                <Twitter className="w-5 h-5 text-white" />
+                <Facebook className="w-5 h-5 text-white" />
               </a>
             </div>
           </div>

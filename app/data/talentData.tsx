@@ -1,5 +1,5 @@
 import React from 'react'
-import { AudioLines, Camera, Component, Drum, Headphones, Instagram, Palette, Signature, Twitter, Video } from 'lucide-react';
+import { AudioLines, Camera, Component, Drum, Headphones, Instagram, Palette, Signature, Facebook, Video } from 'lucide-react';
 
 const talentData = () => {
 
@@ -8,7 +8,7 @@ interface Person {
   profession: ProfessionType;
   image: string;
   instagram: string;
-  twitter: string;
+  facebook: string;
 }
 
 type ProfessionType = 'Musician' | 'Artist' | 'Photographer' | 'Designer' | 'Videographer' | 'Writer' | 'DJ' | 'Dancer';
@@ -27,65 +27,65 @@ const iconGroup = {
         {
           name: "Danny Irakoze",
           profession: "Musician",
-          image: "/images/team3.png",
+          image: "/images/jozef.jpeg",
           instagram: "https://instagram.com",
-          twitter: "https://x.com",
+          facebook: "https://facebook.com/Ni Joseph bateur",
         },
         {
           name: "Jane Doe",
           profession: "Artist",
           image: "/images/team4.png",
           instagram: "https://instagram.com/janedoe",
-          twitter: "https://x.com/janedoe",
+          facebook: "https://facebook.com/Ni Joseph bateur",
         },
         {
           name: "John Smith",
           profession: "Photographer",
           image: "/images/team3.png",
           instagram: "https://instagram.com/johnsmith",
-          twitter: "https://x.com/johnsmith",
+          facebook: "https://x.com/johnsmith",
         },
         {
           name: "Emily Johnson",
           profession: "Designer",
           image: "/images/team4.png",
           instagram: "https://instagram.com/emilyjohnson",
-          twitter: "https://x.com/emilyjohnson",
+          facebook: "https://x.com/emilyjohnson",
         },
         {
           name: "Michael Brown",
           profession: "Videographer",
           image: "/images/team5.png",
           instagram: "https://instagram.com/michaelbrown",
-          twitter: "https://x.com/michaelbrown",
+          facebook: "https://x.com/michaelbrown",
         },
         {
           name: "Sarah Wilson",
           profession: "Writer",
           image: "/images/team6.png",
           instagram: "https://instagram.com/sarahwilson",
-          twitter: "https://x.com/sarahwilson",
+          facebook: "https://x.com/sarahwilson",
         },
         {
           name: "Chris Lee",
           profession: "DJ",
           image: "/images/team4.png",
           instagram: "https://instagram.com/chrislee",
-          twitter: "https://x.com/chrislee",
+          facebook: "https://x.com/chrislee",
         },
         {
           name: "Anna Martinez",
           profession: "Dancer",
           image: "/images/team6.png",
           instagram: "https://instagram.com/annamartinez",
-          twitter: "https://x.com/annamartinez",
+          facebook: "https://x.com/annamartinez",
         },
         {
           name: "Anna Martinez",
           profession: "Dancer",
           image: "/images/team3.png",
           instagram: "https://instagram.com/annamartinez",
-          twitter: "https://x.com/annamartinez",
+          facebook: "https://x.com/annamartinez",
         },
         ];
   return {iconGroup, talent}

@@ -1,4 +1,5 @@
 import { Instagram, Twitter, Facebook, Youtube } from 'lucide-react';
+import { FaTiktok } from 'react-icons/fa';
 
 interface SocialLink {
     icon: typeof Instagram | typeof Twitter | typeof Facebook | any;
@@ -21,6 +22,7 @@ const Footer = () => {
 
     return (
         <div>
+
             <footer className="text-white py-12">
                 <div className="container mx-auto px-4">
                     <div className="flex flex-col md:flex-row justify-center items-center mb-4 gap-2 md:gap-4  ">
@@ -79,10 +81,10 @@ const SocialLinks: React.FC<SocialLinksProps> = ({ links, className = "" }) => (
 );
 
 const socialLinks: SocialLink[] = [
-    { icon: Instagram, href: "https://www.instagram.com/example", label: "Instagram" },
-    { icon: Twitter, href: "https://twitter.com/example", label: "Twitter" },
-    { icon: Facebook, href: "https://www.facebook.com/example", label: "Facebook" },
-    { icon: Youtube, href: "https://www.youtube.com/channel/example", label: "Youtube" },
+    { icon: Instagram, href: "https://www.instagram.com/xposureroom", label: "Instagram" },
+    { icon: Twitter, href: "https://twitter.com/xposureroom", label: "Twitter" },
+    { icon: FaTiktok, href: "https://www.tiktok.com/@xposurechronicle", label: "Facebook" },
+    { icon: Youtube, href: "https://www.youtube.com/@xposureroom", label: "Youtube" },
 ];
 
 const footerLinks: FooterLink[] = [

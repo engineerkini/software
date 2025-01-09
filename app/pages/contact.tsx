@@ -62,7 +62,7 @@ const Contact: React.FC = () => {
     {
       icon: Phone,
       title: "Call Us",
-      details: "+250 788 123 456"
+      details: "+250 782 175 879"
     },
     {
       icon: Mail,
@@ -72,7 +72,7 @@ const Contact: React.FC = () => {
     {
       icon: MapPin,
       title: "Visit Us",
-      details: "Kigali, Rwanda"
+      details: "Kabuga, Kigali, Rwanda"
     }
   ];
 
