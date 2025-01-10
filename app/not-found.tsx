@@ -7,7 +7,7 @@ import Link from 'next/link';
 
 const Notfound = () => {
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={<div></div>}>
       {/* <LoadingBar /> */}
       <div className="w-full h-full min-h-screen flex flex-col items-center justify-center bg-backgroundColor">
         <div className="relative z-50">
