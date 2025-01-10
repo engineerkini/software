@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Footer from "./components/layout/Footer";
 import LoadingBar from "./components/LoadingBar";
+import { Suspense } from "react";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
     icon: "/logo.png", // Path to your icon file
   },
   title: "X PORUSE ROOM",
-  description: "We offer the  support and guidance to help you thirev!",
+  description: "We offer the support and guidance to help you thrive!",
 };
 
 export default function RootLayout({
@@ -32,7 +33,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <LoadingBar />
+        <Suspense fallback={<div>Loading...</div>}>
+          <LoadingBar />
+        </Suspense>
         {children}
         <Footer />
       </body>

@@ -2,13 +2,13 @@
 
 import React, { Suspense } from 'react';
 import Link from 'next/link';
-import LoadingBar from './components/LoadingBar';
+// import LoadingBar from './components/LoadingBar';
 
 
 const Notfound = () => {
   return (
     <Suspense fallback={<div>Loading...</div>}>
-      <LoadingBar />
+      {/* <LoadingBar /> */}
       <div className="w-full h-full min-h-screen flex flex-col items-center justify-center bg-backgroundColor">
         <div className="relative z-50">
           <span className="w-[60px] h-[60px] cursor-pointer">
