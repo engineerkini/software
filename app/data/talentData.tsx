@@ -27,7 +27,7 @@ const iconGroup = {
         {
           name: "Danny Irakoze",
           profession: "Musician",
-          image: "/images/jozef.jpeg",
+          image: "/images/team3.png",
           instagram: "https://instagram.com",
           facebook: "https://facebook.com/Ni Joseph bateur",
         },
