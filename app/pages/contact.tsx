@@ -50,8 +50,8 @@ const GradientText: React.FC<GradientTextProps> = ({ parts, className = "" }) =>
 
 // components/Contact.tsx
 const Contact: React.FC = () => {
-  const email = 'fidelniyomugabo67@gmail.com'; // Replace with your email
-  const subject = encodeURIComponent('Inquiry About Support or Investment');
+  const email = process.env.NEXT_PUBLIC_EMAIL; 
+  const subject = encodeURIComponent(process.env.NEXT_PUBLIC_EMAILSUBJECT as string);
   const body = encodeURIComponent(
     `Hello,\n\nI am contacting your company to:\n\n- Seek guidance and talent support.\n- Discuss potential investment opportunities to support your company.\n\nPlease let me know how we can proceed further.\n\nLooking forward to your response.\n\nBest regards,`
   );
@@ -67,7 +67,7 @@ const Contact: React.FC = () => {
     {
       icon: Mail,
       title: "Email Us",
-      details: "info@xprosureroomsupport.com"
+      details: "chroniclesexposure@gmail.com"
     },
     {
       icon: MapPin,

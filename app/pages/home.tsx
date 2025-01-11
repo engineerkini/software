@@ -12,7 +12,7 @@ const Home = () => {
 
   return (
     <>
-     <div id="home" className=" w-full h-screen 2xl:h-[50vh] flex items-center justify-center  ">
+     <div id="home" className=" w-full h-screen flex items-center justify-center  ">
 
 <div className=" w-full  z-20 flex flex-col items-center justify-center h-full ">
   <div className="md:max-w-4xl mx-auto text-center">

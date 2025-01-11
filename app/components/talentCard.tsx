@@ -21,7 +21,7 @@ const TalentCard: React.FC<Person> = ({ name, profession, image, instagram, face
     <div className="relative w-full h-full bg-bgCard/20 rounded-xl p-6 transition-transform duration-300 hover:scale-105 overflow-hidden group">
       {/* Gradient backgrounds */}
       <div className="absolute inset-0 bg-gradient-to-br from-pink-500/20 to-amber-500/20 rounded-xl" />
-      <div className="absolute -z-10 top-10 left-10 w-32 h-32 bg-gradient-to-r from-pink-500 to-amber-500 rounded-full blur-xl opacity-60" />
+      <div className="absolute -z-10 top-10 left-10 w-32 h-32 bg-gradient-to-r from-pink-500/30 to-amber-500/20 rounded-full blur-xl opacity-60" />
       
       {/* Content container */}
       <div className="relative h-full flex flex-col items-center">
