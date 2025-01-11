@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Satisfy&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Satisfy&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -8,7 +9,9 @@
 
 html {
   scroll-behavior: smooth;
+  font-family: "Work Sans", serif;
 }
+
 
 .art-font{
   font-family: "Satisfy", serif;
@@ -33,10 +36,11 @@ html {
 body {
   color: var(--secondaryText);
   background: var(--background);
-  font-family: "Inter", serif;
+  font-family: "Work Sans", serif;
   font-optical-sizing: auto;
   font-style: normal;
   overflow-y: scroll;
+
 }
 
 :host,html {

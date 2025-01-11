@@ -1,172 +1,55 @@
-import { AudioLines, Camera, Component, Drum, Headphones, Instagram, Palette, Signature, Twitter, Video } from 'lucide-react'
-import React, { JSX } from 'react'
-type Person = {
-    name: string;
-    profession: string;
-    image: string;
-    instagram: string;
-    twitter: string;
-  };
-  
-  
-  type IconMap = {
-    [profession: string]: JSX.Element;
-  };
-  
-const About = () => {
-    return (
-        <div className='h-full bg-backgroundColor pt-[150px]'>
-       {/* Our Mission */}
-<div className="flex flex-col items-center justify-center px-5 gap-2">
-  <h2 className="text-bodyText text-3xl md:text-5xl text-center font-medium flex items-center justify-center gap-5">
-    Our<span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-amber-500   ">Mission</span>
-  </h2>
-  <p className="text-gray-400 text-bodyDefault leading-bodyDefault text-center md:w-3/4 xl:w-2/4">
-    To empower and elevate young talent in the fields of singing, producing, and videography, establishing Exposure Chronicle as a premier platform for artistic expression and media production in East Africa.
-  </p>
-  <p className="text-gray-400 text-bodyDefault leading-bodyDefault text-center md:w-3/4 xl:w-2/4 mt-4">
-    We believe in nurturing local talent to reshape the media landscape, inspiring the next generation of artists to thrive and innovate.
-  </p>
-</div>
+import React from 'react';
+import TeamGrid from '../components/TeamGrid';
+import VRCubeWithStyles from '../components/CubeAbout';
+import Link from 'next/link';
+import { Component } from 'lucide-react';
 
-            {/* Our Team  */}
-      
-        <div className='text-bodyText  gap-5 px-5 lg:px-[50px] xl:px-[100px] pt-5 flex flex-col items-center justify-center'>
-                <div  className='py-2 border bg-bgCard/20 w-full  border-bgCard/15 rounded-md px-5'>
-                    <h2 className=' text-bodyText text-2xl md:text-4xl text-center font-medium '>Our <span className='text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-amber-500 '> Team</span> </h2>
-                </div>
-
-             </div>
-            <div className=' flex-col w-full items-center justify-center  gap-5 text-bodyText px-5 lg:px-[50px] xl:px-[100px] '>
-        
-               <TeamCards />
-              
-            </div>
-
-        </div>
-    )
-}
-
-export default About
-
-
-
-// Icon mapping for each profession
-const iconGroup: IconMap = {
-  Musician: <AudioLines className="text-[14px] w-[14px] h-[14px]" />,
-  Artist: <Palette className="text-[14px] w-[14px] h-[14px]" />,
-  Photographer: <Camera className="text-[14px] w-[14px] h-[14px]" />,
-  Designer: <Component className="text-[14px] w-[14px] h-[14px]" />,
-  Videographer: <Video className="text-[14px] w-[14px] h-[14px]" />,
-  Writer: <Signature className="text-[14px] w-[14px] h-[14px]" />,
-  DJ: <Headphones className="text-[14px] w-[14px] h-[14px]" />,
-  Dancer: <Drum className="text-[14px] w-[14px] h-[14px]" />,
-};
-
-// Array of people with their details
-const peopleWithIcons: Person[] = [
-  {
-    name: "Danny Irakoze",
-    profession: "Musician & Talent Manager",
-    image: "/images/team1.png",
-    instagram: "https://instagram.com",
-    twitter: "https://x.com",
-  },
-  {
-    name: "Jane Doe",
-    profession: "CIO & Artist",
-    image: "/images/team2.png",
-    instagram: "https://instagram.com/janedoe",
-    twitter: "https://x.com/janedoe",
-  },
-  {
-    name: "John Smith",
-    profession: "Professional Photographer",
-    image: "/images/team1.png",
-    instagram: "https://instagram.com/johnsmith",
-    twitter: "https://x.com/johnsmith",
-  },
-  {
-    name: "Emily Johnson",
-    profession: "Creative Designer",
-    image: "/images/team2.png",
-    instagram: "https://instagram.com/emilyjohnson",
-    twitter: "https://x.com/emilyjohnson",
-  },
-  {
-    name: "Michael Brown",
-    profession: "Cinematographer & Videographer",
-    image: "/images/team2.png",
-    instagram: "https://instagram.com/michaelbrown",
-    twitter: "https://x.com/michaelbrown",
-  },
-  {
-    name: "Sarah Wilson",
-    profession: "Writer & Content Creator",
-    image: "/images/team1.png",
-    instagram: "https://instagram.com/sarahwilson",
-    twitter: "https://x.com/sarahwilson",
-  },
-  {
-    name: "Chris Lee",
-    profession: "DJ & Sound Engineer",
-    image: "/images/team1.png",
-    instagram: "https://instagram.com/chrislee",
-    twitter: "https://x.com/chrislee",
-  },
-  {
-    name: "Anna Martinez",
-    profession: "Professional Dancer & Trainer",
-    image: "/images/team1.png",
-    instagram: "https://instagram.com/annamartinez",
-    twitter: "https://x.com/annamartinez",
-  },
-];
-
-
-// Component to render cards
-function TeamCards() {
+const About: React.FC = () => {
   return (
-    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-5 xl:gap-6 2xl:gap-8 pb-10'>
-      {peopleWithIcons.map((person, index) => (
-        <div key={index} className="text-bodyText pt-10">
-          <div
-            className="relative border border-bgCard/15   bg-cover bg-center min-w-[280px]  xl:min-w-[350px] min-h-[300px] h-full rounded-md p-5 group overflow-hidden"
-            style={{ backgroundImage: `url(${person.image})` }}
-          >
-            {/* Overlay */}
-            <div className="absolute inset-0 bg-[#1f1d1dc2] opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-              {/* Social Media Icons */}
-              <div className="flex gap-4">
-                <a
-                  href={person.instagram}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-white hover:text-gray-300"
-                >
-                  <Instagram />
-                </a>
-                <a
-                  href={person.twitter}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-white hover:text-gray-300"
-                >
-                <Twitter />
-                </a>
-              </div>
-            </div>
-          </div>
-          {/* Text Below the Card */}
-          <p className="text-bodySmall font-[500]">
-            <strong>{person.name}</strong>
+    <div className='h-full bg-backgroundColor pt-[150px]'>
+
+      <div className='w-full  flex lg:flex-row flex-col justify-between lg:items-start items-center  min-h-screen h-full'>
+        <div className="flex flex-col items-center lg:items-start justify-start lg:px-[100px] gap-2  ">
+          <h2 className="text-bodyText text-3xl md:text-8xl text-center font-medium flex items-center justify-center gap-5">
+            Our<span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-amber-500">Mission</span>
+          </h2>
+          <p className="text-gray-300 text-bodyDefault md:text-bodyLager leading-bodyDefault text-center lg:text-start  w-full min-w-[280px] md:w-3/4 xl:w-3/4">
+            To empower and elevate young talent in the fields of singing, producing, and videography, establishing Exposure Chronicle as a premier platform for artistic expression and media production in East Africa.
           </p>
-          <p className="art-font cursor-pointer hover:text-[#E4E4E7] text-bodySmall font-[400] flex items-center justify-start gap-2">
-            {iconGroup[person.profession]} {person.profession}
+          <p className="text-gray-400 text-bodyDefault md:text-bodyLager  leading-bodyDefault text-center lg:text-start md:w-2/4 xl:w-3/4 mt-4">
+            We believe in nurturing local talent to reshape the media landscape, inspiring the next generation of artists to thrive and innovate.
           </p>
+          <button className="px-8 py-3 lg:mt-[100px] rounded-md mt-5 font-medium text-white bg-gradient-to-r from-pink-500 to-amber-500 shadow-lg hover:opacity-90 transition-all duration-300" style={{
+        boxShadow: '0 4px 15px rgba(255, 146, 91, 0.3)'
+      }}>
+      <Link href="/#contact">
+      <span className='flex items-center justify-center gap-2'>
+    <Component className='w-[14px] h-[14px]' /> Get Started
+    </span>
+      </Link>
+
+    </button>
         </div>
-      ))}
+        <VRCubeWithStyles />
+
+      </div>
+      {/* Our Team */}
+   
+      <div>
+
+      </div>
+      <div className='flex-col w-full items-center justify-center gap-5 text-bodyText px-5 lg:px-[50px] xl:px-[100px]'>
+          <div className='text-bodyText gap-5  pt-5 flex flex-col items-center justify-center'>
+        <div className='py-2 border bg-bgCard/20 w-full border-bgCard/15 rounded-md px-5'>
+          <h2 className='text-bodyText text-2xl md:text-4xl text-center font-medium'>
+            Our <span className='text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-amber-500'>Team</span>
+          </h2>
+        </div>
+      </div> 
+        <TeamGrid />
+      </div> 
     </div>
   );
-}
+};
 
+export default About;

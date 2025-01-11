@@ -2,12 +2,14 @@
 
 import { Button } from '@/components/ui/button';
 import { LogIn, Menu, Phone, Plane, X } from 'lucide-react';
+import { usePathname } from 'next/navigation';
 import React, { useState, useEffect } from 'react';
 
 const links = [
   { href: "/#home", label: "Home" },
   { href: "/#services", label: "Services" },
   { href: "/#contact", label: "Contact Us" },
+  { href: "/#faq", label: "FAQ" },
   { href: "/about", label: "About" },
   { href: "/talentroom", label: "Talent room" },
 
@@ -16,6 +18,7 @@ const links = [
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
 
   // Handle scroll effect
   useEffect(() => {
@@ -64,17 +67,17 @@ const Header = () => {
         </div>
 
         {/* Desktop Navigation */}
-        <nav className='hidden md:block'>
+        <nav className='hidden lg:block'>
           <ul className='flex space-x-8'>
             {links.map((link) => (
               <li key={link.href}>
                 <a
                   href={link.href}
-                  className='relative text-gray-400 hover:text-gray-500 transition-colors duration-300
+                  className={` ${pathname === link.href ? 'border-b-2 border-amber-500 hover:border-none ':''} relative text-gray-400 hover:text-gray-500 transition-colors duration-300
                     after:content-[""] after:absolute after:w-full after:h-0.5 
                     after:bg-gradient-to-r from-pink-500 to-amber-500 after:left-0 after:-bottom-1 after:rounded-full
                     after:scale-x-0 after:transition-transform after:duration-300
-                    hover:after:scale-x-100'
+                    hover:after:scale-x-100`}
                 >
                   {link.label}
                 </a>
@@ -96,7 +99,7 @@ const Header = () => {
         {/* Mobile Menu Button */}
         <button 
           onClick={toggleMenu}
-          className='relative z-50 md:hidden text-bodyText p-2 hover:bg-white/10 rounded-full
+          className='relative z-50 lg:hidden text-bodyText p-2 hover:bg-white/10 rounded-full
             transition-colors duration-300'
         >
           {menuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -106,7 +109,7 @@ const Header = () => {
 
       {/* Mobile Menu Overlay */}
       <div 
-        className={`fixed inset-0 bg-black/95 backdrop-blur-sm h-screen transition-opacity  bg-opacity-40  duration-300 md:hidden
+        className={`fixed inset-0 bg-black/95 backdrop-blur-sm h-screen transition-opacity  bg-opacity-40  duration-300 lg:hidden
           ${menuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}
         style={{ pointerEvents: menuOpen ? 'auto' : 'none' }}
       >

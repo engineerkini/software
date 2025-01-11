@@ -80,13 +80,13 @@ const iconGroup = {
           instagram: "https://instagram.com/annamartinez",
           facebook: "https://x.com/annamartinez",
         },
-        {
-          name: "Anna Martinez",
-          profession: "Dancer",
-          image: "/images/team3.png",
-          instagram: "https://instagram.com/annamartinez",
-          facebook: "https://x.com/annamartinez",
-        },
+        // {
+        //   name: "Anna Martinez",
+        //   profession: "Dancer",
+        //   image: "/images/team3.png",
+        //   instagram: "https://instagram.com/annamartinez",
+        //   facebook: "https://x.com/annamartinez",
+        // },
         ];
   return {iconGroup, talent}
 }

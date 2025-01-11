@@ -23,13 +23,13 @@ const FAQSection = () => {
       ];
 
   return (
-    <div className=" relative w-full max-w-3xl mx-auto p-8 bg-black text-white">
+    <section id='faq' className=" relative w-full max-w-3xl mx-auto p-8 bg-black text-white">
       {/* FAQ Header */}
       <div className="text-center mb-8">
       <button className="bg-[#3f3f4666] text-bodyText px-5 py-3 text-bodySmall rounded-full transition-all duration-300">
        FAQs
     </button>
-    <h2 className="mb-4 text-3xl md:text-5xl text-center font-semibold">
+    <h2 className="mb-4 leading-[40px] text-3xl md:text-5xl text-center font-semibold">
   <span className="text-white">Common</span>{" "}
   <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-amber-500 ">Inquiries</span>
   <br />
@@ -57,7 +57,7 @@ const FAQSection = () => {
       </Accordion>
       <div className="absolute  -z-10 inset-0 bg-gradient-to-b from-black/50 via-black/80 to-black" />
         
-    </div>
+    </section>
   );
 };
 
