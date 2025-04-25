@@ -1,118 +1,104 @@
-import { Button } from '@/components/ui/button';
-import { Phone, Mail, MapPin, Instagram, Twitter, Facebook, Youtube, Plane } from 'lucide-react';
+// ContactSection.jsx
+import { Phone, Mail, MapPin, Github, Linkedin, Twitter, MessageSquare } from 'lucide-react';
 
-// types.ts
-interface ContactInfo {
-  icon: typeof Phone | typeof Mail | typeof MapPin;
+
+
+interface ContactCardProps {
+  icon: React.ComponentType<React.SVGProps<SVGSVGElement>>; 
   title: string;
   details: string;
-}
-
-interface SocialLink {
-  icon: typeof Instagram | typeof Twitter | typeof Facebook | any;
-  href: string;
-  label: string;
-}
-
-interface FooterLink {
-  label: string;
-  href: string;
-}
-
-// components/ContactCard.tsx
-interface ContactCardProps extends ContactInfo {
   className?: string;
 }
 
-const ContactCard: React.FC<ContactCardProps> = ({ icon: Icon, title, details, className = "" }) => (
-  <div className={`bg-gradient-to-b border bg-bgCard/15  border-bgCard/15 rounded-md p-6 text-center ${className}`}>
-    <Icon className="w-8 h-8 text-primaryText mx-auto mb-4" />
+const ContactCard: React.FC<ContactCardProps> = ({
+  icon: Icon,
+  title,
+  details,
+  className = "",
+}) => (
+  <div className={`bg-gradient-to-r from-blue-500 to-cyan-500 border-blue-500/15 rounded-md p-6 text-center ${className}`}>
+    <Icon className="w-8 h-8 text-white mx-auto mb-4" />
     <h3 className="text-white font-semibold mb-2">{title}</h3>
-    <p className="text-gray-400">{details}</p>
+    <p className="text-gray-100">{details}</p>
   </div>
 );
 
-// components/GradientText.tsx
-interface GradientTextProps {
-  parts: Array<{ text: string; highlight?: boolean }>;
-  className?: string;
-}
 
-const GradientText: React.FC<GradientTextProps> = ({ parts, className = "" }) => (
-  <h2 className={` text-bodyText text-3xl md:text-5xl font-semibold ${className}`}>
-    {parts.map((part, index) => (
-      <span key={index} className={part.highlight ? "text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-amber-500 " : "text-white"}>
-        {part.text}
-      </span>
-    ))}
-  </h2>
-);
 
-// components/Contact.tsx
-const Contact: React.FC = () => {
-  const email = process.env.NEXT_PUBLIC_EMAIL; 
-  const subject = encodeURIComponent(process.env.NEXT_PUBLIC_EMAILSUBJECT as string);
+const ContactSection = () => {
+  // Email configuration
+  const email = 'fidelniyomugabo67@gmail.com';
+  const subject = encodeURIComponent('Software Development Inquiry');
   const body = encodeURIComponent(
-    `Hello,\n\nI am contacting your company to:\n\n- Seek guidance and talent support.\n- Discuss potential investment opportunities to support your company.\n\nPlease let me know how we can proceed further.\n\nLooking forward to your response.\n\nBest regards,`
+    "Hello Fidel,\n\nI am reaching out regarding:\n\n- A potential software development project\n- Collaboration opportunity\n- Other professional inquiry\n\nLooking forward to connecting with you.\n\nBest regards,"
   );
-
   const mailtoLink = `mailto:${email}?subject=${subject}&body=${body}`;
 
-  const contactInfo: ContactInfo[] = [
+  // Contact information
+  const contactInfo = [
     {
       icon: Phone,
-      title: "Call Us",
+      title: "Call Me",
       details: "+250 782 175 879"
     },
     {
       icon: Mail,
-      title: "Email Us",
-      details: "chroniclesexposure@gmail.com"
+      title: "Email Me",
+      details: "fidelniyomugabo67@gmail.com"
     },
     {
       icon: MapPin,
-      title: "Visit Us",
-      details: "Kabuga, Kigali, Rwanda"
+      title: "Location",
+      details: "Kigali, Rwanda"
     }
   ];
 
-  const headingParts = [
-    { text: "Ready to " },
-    { text: "take your talent", highlight: true },
-    { text: " to the next level?" }
-  ];
-
   return (
-    <>
-      <section id="contact" className="relative w-full bg-backgroundColor py-20 h-full">
-        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/80 to-black" />
-        
-        <div className="relative z-10 container mx-auto px-4">
-          <div className="text-center max-w-3xl mx-auto">
-            <GradientText parts={headingParts} className="mb-6" />
-            
-            <p className="text-gray-400 mb-6 text-bodySmall leading-bodySmall">
-              Join a community of artists who are shaping the future.  <br /> 
-              Gain hands-on experience, collaborate with industry pros, and build your portfolio.
-            </p>
+    <section id="contact" className="relative w-full bg-white py-20 h-full">
+     
 
-         <div className='flex items-center justify-center'>
-         <a href={mailtoLink} className="bg-bgCard hover:bg-[#3f3121c5] text-primaryText px-8 py-3 flex gap-1 items-center justify-center
-                             rounded-md  text-bodyDefault font-medium hover:opacity-90 transition-all duration-300">
-              <Plane/> Connect with Us
-            </a >
-         </div>
-          </div>
+      <div className="relative z-10 container mx-auto px-4">
+        <div className="text-center max-w-3xl mx-auto">
+   
+    <h2 className="text-black text-3xl md:text-5xl text-center font-semibold">
+    Ready to  <span className='text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-500'>bring your project</span> to life?
+          </h2>
+          <p className="text-gray-700 mb-6 text-bodySmall leading-bodySmall">
+            Let's collaborate to build something amazing together. <br />
+            Whether you need a custom web application, technical consultation, or just want to discuss ideas, I'm here to help.
+          </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-5 xl:gap-6 2xl:gap-8 px-5 lg:px-[50px] xl:px-[100px]  mt-16">
-            {contactInfo.map((info, index) => (
-              <ContactCard key={index} {...info} />
-            ))}
+          <div className='flex items-center justify-center'>
+            <a href={mailtoLink} className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-8 py-3 flex gap-1 items-center justify-center
+                           rounded-md text-bodyDefault font-medium hover:opacity-90 transition-all duration-300">
+              <MessageSquare className="w-4 h-4" /> Connect with Me
+            </a>
           </div>
         </div>
-      </section>
-    </>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 xl:gap-6 2xl:gap-8 px-5 lg:px-[50px] xl:px-[100px] mt-16">
+          {contactInfo.map((info, index) => (
+            <ContactCard key={info.title} {...info} />
+          ))}
+        </div>
+        
+        <div className="mt-16 text-center">
+          <h3 className="text-white text-xl mb-4">Find me on</h3>
+          <div className="flex justify-center gap-6">
+            <a href="https://github.com/NiyomugaboFidel" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-blue-500 transition-colors">
+              <Github className="w-6 h-6" />
+            </a>
+            <a href="https://www.linkedin.com/in/niyomugabo-fidele-5201312b7/" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-blue-500 transition-colors">
+              <Linkedin className="w-6 h-6" />
+            </a>
+            <a href="https://x.com/ni_fidele" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-blue-500 transition-colors">
+              <Twitter className="w-6 h-6" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 };
 
-export default Contact;
+export default ContactSection;

@@ -33,7 +33,7 @@ const LoadingBar = () => {
         pointer-events: none;
       }
       #nprogress .bar {
-         background: linear-gradient(to right, #ec4899, #f59e0b); /* Pink (from-pink-500) to Amber (to-amber-500) */
+      background: linear-gradient(to right, #3b82f6, #06b6d4); /* Blue-500 to Cyan-500 */
         position: fixed;
         z-index: 9999;
         top: 0;

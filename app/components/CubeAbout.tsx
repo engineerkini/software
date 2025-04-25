@@ -1,6 +1,7 @@
 'use client'
 
-import React, { useState, useEffect, useRef } from 'react';
+import Image from 'next/image';
+import { useState, useEffect, useRef } from 'react';
 
 interface Rotation {
   x: number;
@@ -19,8 +20,8 @@ interface Face {
 }
 
 const Logo: React.FC = () => (
-   <div className='w-[40px] h-[40px] bg-black rounded-full'>
-     <img src='/logo.png'/>
+   <div className='w-[40px] h-[40px] bg-blue-800 rounded-full'>
+     <Image width={60} height={60} alt='logo' src='/logo.png'/>
    </div>
 );
 
@@ -30,37 +31,38 @@ const AUTO_ROTATION_SPEED = 0.2;
 const RADIUS = 12;
 
 const faces: Face[] = [
-  { 
-    title: "Showcase Portfolio", 
-    gradient: "from-pink-500 to-amber-500", 
-    content: "Highlight participant's best work." 
+  {
+    title: "Projects Showcase",
+    gradient: "from-blue-500 to-cyan-500",
+    content: "Explore a curated selection of my fullstack projects."
   },
-  { 
-    title: "Training Programs", 
-    gradient: "from-amber-500 to-pink-500", 
-    content: "Skill-building through workshops and training." 
+  {
+    title: "Technical Skills",
+    gradient: "from-blue-500 to-cyan-500",
+    content: "A deep dive into the tools, languages, and frameworks I use."
   },
-  { 
-    title: "Mentorship Opportunities", 
-    gradient: "from-pink-500 to-amber-500", 
-    content: "Guidance  from industry professionals." 
+  {
+    title: "Work Experience",
+    gradient: "from-blue-500 to-cyan-500",
+    content: "Professional journey, freelance work, and collaborations."
   },
-  { 
-    title: "Community Hub", 
-    gradient: "from-amber-500 to-pink-500", 
-    content: "Collaborative space for creatives to connect and share." 
+  {
+    title: "Open Source Contributions",
+    gradient: "from-blue-500 to-cyan-500",
+    content: "Projects and contributions to the developer community."
   },
-  { 
-    title: "Online Content Library", 
-    gradient: "from-pink-500 to-amber-500", 
-    content: "Access to tutorials and resources for artists." 
+  {
+    title: "Blog & Insights",
+    gradient: "from-blue-500 to-cyan-500",
+    content: "Articles and tutorials on web development and tech trends."
   },
-  { 
-    title: "Event Calendar", 
-    gradient: "from-amber-500 to-pink-500", 
-    content: "Track upcoming events and showcases." 
+  {
+    title: "Contact & Connect",
+    gradient: "from-blue-500 to-cyan-500",
+    content: "Get in touch or find me on GitHub, LinkedIn, and more."
   }
 ];
+
 
 
 // Round values to 4 decimal places to ensure consistent server/client rendering
@@ -147,7 +149,7 @@ const CircleDisplay: React.FC = () => {
   }
 
   return (
-    <div className="w-full h-screen lg:pr-[200px] flex flex-col items-center justify-center perspective-1200">
+    <div className="w-full h-[70vh] lg:pr-[200px] flex flex-col items-center justify-center perspective-1200">
       <div 
         ref={displayRef}
         className="relative w-36 h-36 md:w-80 md:h-[150px] transform-style-preserve-3d cursor-grab active:cursor-grabbing"
@@ -165,7 +167,7 @@ const CircleDisplay: React.FC = () => {
       >
         {faces.map((face, index) => (
           <div
-            key={index}
+            key={face.title}
             className={`absolute w-40 h-40 md:w-52 md:h-52 flex items-center justify-center 
                        bg-gradient-to-br ${face.gradient}
                        border border-white/20 rounded-full`}
@@ -191,8 +193,8 @@ const CircleDisplay: React.FC = () => {
       </div>
 
       <div className="absolute w-full h-full pointer-events-none">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] lg:w-[500px] lg:h-[500px] bg-gradient-to-r from-pink-500 to-amber-500 rounded-full opacity-20"/>
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[280px] h-[280px]  lg:w-[400px] lg:h-[400px] bg-gradient-to-r from-pink-500 to-amber-500 rounded-full opacity-20"/>
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] lg:w-[500px] lg:h-[500px] bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full opacity-20"/>
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[280px] h-[280px]  lg:w-[400px] lg:h-[400px] bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full opacity-20"/>
       </div>
     </div>
   );

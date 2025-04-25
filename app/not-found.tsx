@@ -7,9 +7,9 @@ import Link from 'next/link';
 
 const Notfound = () => {
   return (
-    <Suspense fallback={<div></div>}>
+    <Suspense fallback={<div> </div>}>
       {/* <LoadingBar /> */}
-      <div className="w-full h-full min-h-screen flex flex-col items-center justify-center bg-backgroundColor">
+      <div className="w-full h-full min-h-screen flex flex-col items-center justify-center bg-white">
         <div className="relative z-50">
           <span className="w-[60px] h-[60px] cursor-pointer">
             <img
@@ -21,7 +21,7 @@ const Notfound = () => {
         </div>
 
         <div className="flex flex-col items-center justify-center">
-          <h1 className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-amber-500 cursor-pointer text-[96px]">
+          <h1 className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-500  cursor-pointer text-[96px]">
             404
           </h1>
           <p className="text-white text-bodyDefault leading-bodySmall">
@@ -29,7 +29,8 @@ const Notfound = () => {
           </p>
         </div>
         <button
-          className="px-8 py-3 rounded-md mt-5 font-medium text-white bg-gradient-to-r from-pink-500 to-amber-500 shadow-lg hover:opacity-90 transition-all duration-300"
+         type='button'
+          className="px-8 py-3 rounded-md mt-5 font-medium text-white bg-gradient-to-r from-blue-500 to-cyan-500  shadow-lg hover:opacity-90 transition-all duration-300"
           style={{
             boxShadow: '0 4px 15px rgba(255, 146, 91, 0.3)',
           }}
