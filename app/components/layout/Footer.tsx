@@ -52,13 +52,13 @@ const Footer = () => {
 const socialLinks: SocialLink[] = [
   {
     icon: Instagram,
-    href: "https://www.instagram.com/xposureroom",
+    href: "https://www.instagram.com/k.brow_n",
     label: "Instagram",
   },
-  { icon: Twitter, href: "https://twitter.com/xposureroom", label: "Twitter" },
+  { icon: Twitter, href: "https://x.com/EngineerBrown7", label: "Twitter" },
   {
     icon: Linkedin,
-    href: "https://www.youtube.com/@xposureroom",
+    href: "https://www.youtube.com/@funaccnt9",
     label: "Youtube",
   },
 ];
