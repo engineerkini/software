@@ -16,7 +16,7 @@ const About: React.FC = () => {
           </div>
 
     <p className="text-black/60 text-bodyDefault md:text-bodyLager leading-bodyDefault text-center lg:text-start w-full min-w-[280px] md:w-3/4 xl:w-3/4">
-      I'M FIDELE NIYOMUGABO a passionate and detail-oriented Software Engineer with experience in building fullstack web applications using modern technologies like React, Next.js, Node.js, PostgreSQL, and more. I love turning ideas into real, scalable digital solutions.
+      I'M KINI ESTHER a passionate and detail-oriented Software Engineer with experience in building fullstack web applications using modern technologies like React, Next.js, Node.js, PostgreSQL, and more. I love turning ideas into real, scalable digital solutions.
     </p>
     <p className="text-black/60 text-bodyDefault md:text-bodyLager leading-bodyDefault text-center lg:text-start md:w-2/4 xl:w-3/4 mt-4">
       My mission is to create software that not only functions efficiently but also delivers great user experiences. I’m constantly learning, collaborating, and contributing to the tech community to stay ahead in the ever-evolving world of development.
