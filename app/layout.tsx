@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   icons: {
     icon: "/logo.png", // Path to your icon file
   },
-  title: "X PORUSE ROOM",
+  title: "Software Site",
   description: "We offer the support and guidance to help you thrive!",
 };
 
@@ -31,7 +31,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
- <head>
+      <head>
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-1F98T9CZTH"
           strategy="afterInteractive"
