@@ -36,7 +36,7 @@ const ContactSection = () => {
   const email = "engineerkini@gmail.com";
   const subject = encodeURIComponent("Software Development Inquiry");
   const body = encodeURIComponent(
-    "Hello Fidel,\n\nI am reaching out regarding:\n\n- A potential software development project\n- Collaboration opportunity\n- Other professional inquiry\n\nLooking forward to connecting with you.\n\nBest regards,"
+    "Hello Engineer.K,\n\nI am reaching out regarding:\n\n- A potential software development project\n- Collaboration opportunity\n- Other professional inquiry\n\nLooking forward to connecting with you.\n\nBest regards,"
   );
   const mailtoLink = `mailto:${email}?subject=${subject}&body=${body}`;
 
@@ -45,7 +45,7 @@ const ContactSection = () => {
     {
       icon: Phone,
       title: "Call Me",
-      details: "+254 719248067",
+      details: "+254 0719248067",
     },
     {
       icon: Mail,
@@ -55,7 +55,7 @@ const ContactSection = () => {
     {
       icon: MapPin,
       title: "Location",
-      details: "Nairobi, Kenya",
+      details: "Nairobi, Westlands, Kenya",
     },
   ];
 
