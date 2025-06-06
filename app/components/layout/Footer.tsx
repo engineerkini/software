@@ -27,7 +27,8 @@ const Footer = () => {
               <div className="text-gray-400 hover:text-gray-500  text-sm  md:mb-0">
                 <p className="md:pr-10">
                   {" "}
-                  © {new Date().getFullYear()} ENGINEER K . All rights reserved.
+                  © {new Date().getFullYear()} ENGINEER KINI . All rights
+                  reserved.
                 </p>
               </div>
               <div className="flex space-x-4">
