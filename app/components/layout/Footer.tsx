@@ -20,7 +20,11 @@ interface SocialLinksProps {
 const Footer = () => {
   return (
     <div>
-      <footer className="text-white py-12">
+      <footer 
+        className="text-white py-12 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url('https://images.unsplash.com/photo-1689443111130-6e9c7dfd8f9e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')`        }}
+      >
         <div className="container mx-auto px-4">
           <div className="">
             <div className="flex flex-col md:flex-row  justify-center gap-4 md:gap-5 items-center">

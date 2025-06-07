@@ -11,7 +11,7 @@ export default function AboutLayout({
     <> 
        {/* <LoadingBar /> */}
         <Header />  
-        <main className="p-4">{children}</main>
+        <main className="">{children}</main>
  
   </>
   );
